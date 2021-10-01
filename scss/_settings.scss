@@ -1,0 +1,26 @@
+.attribution {
+    justify-self: flex-end; 
+    font-size: 11px; 
+    text-align: center;
+    color: white; 
+    & a { 
+        color: $key-background-equal; }
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $main-background;
+    align-items: center;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+}
