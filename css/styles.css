@@ -8,8 +8,8 @@
 *       NEON THEME
 */
 .attribution {
-  justify-self: flex-end;
   font-size: 11px;
+  margin: 80px auto;
   text-align: center;
   color: white;
 }
@@ -36,7 +36,6 @@ body.neon-theme .attribution a {
 
 body, html {
   width: 100%;
-  height: 100%;
 }
 
 body {
@@ -196,6 +195,8 @@ body.neon-theme .calculator .top .switch-container .toggle-container input[type=
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -203,9 +204,7 @@ body.neon-theme .calculator .top .switch-container .toggle-container input[type=
   -ms-grid-rows: (1fr)[12];
       grid-template-rows: repeat(12, 1fr);
   gap: 20px;
-  margin: auto;
   max-width: 480px;
-  margin: auto;
   background: #3a4764;
 }
 
@@ -213,8 +212,8 @@ body.neon-theme .calculator .top .switch-container .toggle-container input[type=
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-grid-row: 1;
-  grid-row: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -235,16 +234,27 @@ body.neon-theme .calculator .top .switch-container .toggle-container input[type=
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.theme-changer {
+  margin-left: 15px;
+}
+
+.theme-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 4px;
+}
+
+.theme-numbers span {
+  font-size: 10px;
+  font-weight: 500;
 }
 
 .toggle-container {
-  margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,7 +276,9 @@ body.neon-theme .calculator .top .switch-container .toggle-container input[type=
 
 .theme-text {
   text-align: center;
-  padding: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-bottom: 3px;
   font-size: 10px;
   font-weight: 500;
 }
@@ -300,7 +312,7 @@ body.neon-theme .calculator .top .switch-container .toggle-container input[type=
 .keys-container {
   background-color: #232c43;
   padding: 15px;
-  grid-row: span 8;
+  grid-row: span 7;
   display: -ms-grid;
   display: grid;
   border-radius: 10px;
@@ -338,7 +350,7 @@ body.neon-theme .calculator .top .switch-container .toggle-container input[type=
       justify-self: stretch;
   font-size: 24px;
   background: #eae3dc;
-  height: 50px;
+  height: 55px;
   line-height: 50px;
 }
 
