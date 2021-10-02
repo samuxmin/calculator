@@ -1,0 +1,502 @@
+/*
+*       Theme 1
+ */
+/*
+*       LIGHT THEME
+*/
+/*
+*       NEON THEME
+*/
+.attribution {
+  justify-self: flex-end;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: #637097;
+}
+
+body.light-theme .attribution {
+  color: #35352c;
+}
+
+body.light-theme .attribution a {
+  color: #377f86;
+}
+
+body.neon-theme .attribution {
+  color: #ffe53d;
+}
+
+body.neon-theme .attribution a {
+  color: #00e0d1;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #3a4764;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+}
+
+input[type=range] {
+  width: 100%;
+  margin: 7.5px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: transparent;
+  border: 0;
+  width: 100%;
+  height: 0px;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -7.5px;
+  width: 15px;
+  height: 15px;
+  background: #d03f2f;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
+
+input[type=range]::-moz-range-track {
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  width: 100%;
+  height: 0px;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #d03f2f;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 8.5px 0;
+  color: transparent;
+  width: 100%;
+  height: 0px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #f2f2f2;
+  border: 0;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+}
+
+input[type=range]::-ms-thumb {
+  width: 15px;
+  height: 15px;
+  background: #d03f2f;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(255, 255, 255, 0);
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #ffffff;
+}
+
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align: auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type=range] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
+}
+
+body.light-theme .calculator .top .switch-container .toggle-container input[type=range]::-moz-range-thumb {
+  background: #ca5502;
+}
+
+body.light-theme .calculator .top .switch-container .toggle-container input[type=range]::-ms-thumb {
+  background: #ca5502;
+}
+
+body.light-theme .calculator .top .switch-container .toggle-container input[type=range]::-webkit-slider-thumb {
+  background: #ca5502;
+}
+
+body.neon-theme .calculator .top .switch-container .toggle-container input[type=range]::-moz-range-thumb {
+  background: #00e0d1;
+}
+
+body.neon-theme .calculator .top .switch-container .toggle-container input[type=range]::-ms-thumb {
+  background: #00e0d1;
+}
+
+body.neon-theme .calculator .top .switch-container .toggle-container input[type=range]::-webkit-slider-thumb {
+  background: #00e0d1;
+}
+
+.calculator {
+  width: 70%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[12];
+      grid-template-rows: repeat(12, 1fr);
+  gap: 20px;
+  margin: auto;
+  max-width: 480px;
+  margin: auto;
+  background: #3a4764;
+}
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top > * {
+  color: white;
+}
+
+.switch-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.toggle-container {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 22px;
+  border-radius: 50px;
+  width: 55px;
+  background-color: #232c43;
+}
+
+.toggle-container input {
+  width: 85%;
+}
+
+.theme-text {
+  text-align: center;
+  padding: 10px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.calc-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #182034;
+  border-radius: 10px;
+  grid-row: span 3;
+}
+
+.result-text {
+  font-size: 32px;
+  color: #444b5a;
+  padding-right: 20px;
+}
+
+.keys-container {
+  background-color: #232c43;
+  padding: 15px;
+  grid-row: span 8;
+  display: -ms-grid;
+  display: grid;
+  border-radius: 10px;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+}
+
+#equal-btn,
+#reset {
+  grid-column: span 2;
+}
+
+.key {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 2px #b4a597;
+          box-shadow: 0 2px 2px #b4a597;
+  color: #444b5a;
+  outline: none;
+  font-weight: 700;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  font-size: 24px;
+  background: #eae3dc;
+  height: 50px;
+  line-height: 50px;
+}
+
+.key:hover {
+  background-color: #b4a597;
+}
+
+.key-special {
+  background-color: #637097;
+  color: white;
+  -webkit-box-shadow: 0 2px 2px #404e72;
+          box-shadow: 0 2px 2px #404e72;
+}
+
+.key-special:hover {
+  background-color: #404e72;
+}
+
+#equal-btn {
+  background-color: #d03f2f;
+  -webkit-box-shadow: 0 2px 2px #93261a;
+          box-shadow: 0 2px 2px #93261a;
+  color: white;
+}
+
+#equal-btn:hover {
+  background-color: #93261a;
+}
+
+@media (max-width: 540px) {
+  .calculator {
+    margin: auto 20px;
+    width: 90%;
+  }
+  .key {
+    font-size: 20px;
+  }
+}
+
+.light-theme {
+  background-color: #e6e6e6;
+}
+
+.light-theme .calculator {
+  background: #e6e6e6;
+}
+
+.light-theme .calculator .top .switch-container .toggle-container {
+  background-color: #d1cccc;
+}
+
+.light-theme .calculator .top > * {
+  color: #35352c;
+}
+
+.light-theme .calculator .result {
+  background-color: #ededed;
+}
+
+.light-theme .calculator .result .result-text {
+  color: #35352c;
+}
+
+.light-theme .calculator .keys-container {
+  background-color: #d1cccc;
+}
+
+.light-theme .calculator .keys-container .key {
+  -webkit-box-shadow: 0 2px 2px #a69d91;
+          box-shadow: 0 2px 2px #a69d91;
+  color: #35352c;
+  background: #e5e4e1;
+}
+
+.light-theme .calculator .keys-container .key:hover {
+  background-color: #a69d91;
+}
+
+.light-theme .calculator .keys-container .key-special {
+  background-color: #377f86;
+  color: white;
+  -webkit-box-shadow: 0 2px 2px #1b5f65;
+          box-shadow: 0 2px 2px #1b5f65;
+}
+
+.light-theme .calculator .keys-container .key-special:hover {
+  background-color: #1b5f65;
+}
+
+.light-theme .calculator .keys-container #equal-btn {
+  background-color: #ca5502;
+  -webkit-box-shadow: 0 2px 2px #893901;
+          box-shadow: 0 2px 2px #893901;
+  color: white;
+}
+
+.light-theme .calculator .keys-container #equal-btn:hover {
+  background-color: #893901;
+}
+
+.neon-theme {
+  background-color: #160628;
+}
+
+.neon-theme .calculator {
+  background: #160628;
+}
+
+.neon-theme .calculator .top .switch-container .toggle-container {
+  background-color: #1d0934;
+}
+
+.neon-theme .calculator .top > * {
+  color: #ffe53d;
+}
+
+.neon-theme .calculator .result {
+  background-color: #1d0934;
+}
+
+.neon-theme .calculator .result .result-text {
+  color: #ffe53d;
+}
+
+.neon-theme .calculator .keys-container {
+  background-color: #1d0934;
+}
+
+.neon-theme .calculator .keys-container .key {
+  -webkit-box-shadow: 0 2px 2px #871c9c;
+          box-shadow: 0 2px 2px #871c9c;
+  color: #ffe53d;
+  background: #341c4f;
+}
+
+.neon-theme .calculator .keys-container .key:hover {
+  background-color: #871c9c;
+}
+
+.neon-theme .calculator .keys-container .key-special {
+  background-color: #58077d;
+  color: #1b2428;
+  -webkit-box-shadow: 0 2px 2px #bc15f4;
+          box-shadow: 0 2px 2px #bc15f4;
+}
+
+.neon-theme .calculator .keys-container .key-special:hover {
+  background-color: #bc15f4;
+}
+
+.neon-theme .calculator .keys-container #equal-btn {
+  background-color: #00e0d1;
+  -webkit-box-shadow: 0 2px 2px #6cf9f2;
+          box-shadow: 0 2px 2px #6cf9f2;
+  color: #1b2428;
+}
+
+.neon-theme .calculator .keys-container #equal-btn:hover {
+  background-color: #6cf9f2;
+}
+/*# sourceMappingURL=styles.css.map */

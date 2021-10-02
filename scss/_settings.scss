@@ -3,22 +3,37 @@
     font-size: 11px; 
     text-align: center;
     color: white; 
-    & a { 
-        color: $key-background-equal; }
+    a { 
+        color: $special-keys-background; 
+    }
 }
 
-body, html{
+body.light-theme .attribution {
+    color: $theme-2-text;
+    a {
+        color: $theme-2-special-keys-background;
+    }
+}
+
+body.neon-theme .attribution {
+    color: $theme-3-text;
+    a {
+        color: $theme-3-key-background-equal;
+    }
+}
+body, html {
     width: 100%;
     height: 100%;
 }
-body{
+
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: $main-background;
     align-items: center;
 }
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;

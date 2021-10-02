@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap" rel="stylesheet">
@@ -16,7 +16,9 @@
       <span class="calc-text">calc</span>
       <div class="switch-container">
         <small class="theme-text">THEME</small>
-        <input id="theme-toggle" type="range" min="1" max="3" value="1">
+        <div class="toggle-container">
+          <input id="theme-toggle" type="range" min="0" max="2" value="0">
+        </div>
       </div>
     </div>
     <div class="result"><h1 class="result-text" id="result">0</h1></div>

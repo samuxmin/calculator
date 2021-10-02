@@ -1,0 +1,222 @@
+@import './variables', './settings', './toggle';
+
+.calculator{
+    width: 70%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+    gap: 20px;
+    margin: auto;
+    max-width: 480px;
+    margin: auto;
+    background: $main-background;
+}
+
+.top{
+    display: flex;
+    grid-row: 1;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    & > *{
+        color: white;
+    }
+}
+.switch-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-container{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    border-radius: 50px;
+    width: 55px;
+    background-color: $keypad-background;
+    input{
+        width: 85%;
+    }
+}
+
+.theme-text{
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+    font-weight: 500;
+}
+.calc-text{
+    font-size:20px;
+    font-weight: 700;
+}
+.result{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $screen-background;
+    border-radius: 10px;
+    grid-row: span 3;
+}
+.result-text{
+    font-size: 32px;
+    color: $text;
+    padding-right: 20px;
+}
+.keys-container{
+    background-color: $keypad-background;
+    padding: 15px;
+    grid-row: span 8;
+    display: grid;
+    border-radius: 10px;
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+#equal-btn, 
+#reset{
+    grid-column: span 2;
+}
+.key{
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px $keys-shadow;
+    color: $text;
+    outline: none;
+    font-weight: 700;
+    justify-self: stretch;
+    font-size: 24px;
+    background: $keys-background;
+    height: 50px;
+    line-height: 50px;
+    &:hover{
+        background-color: $keys-shadow;
+    }
+}
+.key-special{
+    background-color: $special-keys-background;
+    color: white;
+    box-shadow: 0 2px 2px $special-keys-shadow;
+    &:hover{
+        background-color: $special-keys-shadow;
+    }
+}
+
+#equal-btn{
+    background-color: $key-background-equal;
+    box-shadow: 0 2px 2px $key-shadow-equal;
+    color: $text-equal;
+    &:hover{
+        background-color: $key-shadow-equal;
+    }
+}
+@media (max-width:540px) {
+    .calculator {
+        margin: auto 20px;
+        width: 90%;
+    }
+    .key{
+        font-size: 20px;
+    }
+}
+
+.light-theme{
+    background-color: $theme-2-main-background;
+    .calculator{
+        background: $theme-2-main-background;
+        .top .switch-container .toggle-container{
+            background-color: $theme-2-keypad-background;
+        }
+        .top > *{
+            color: $theme-2-text;
+        }
+        .result{
+            background-color: $theme-2-screen-background;
+            .result-text{
+                color: $theme-2-text;
+            }
+        }
+        .keys-container{
+            background-color: $theme-2-keypad-background;
+            .key{
+                box-shadow: 0 2px 2px $theme-2-keys-shadow;
+                color: $theme-2-text;
+                background: $theme-2-keys-background;
+                &:hover{
+                    background-color: $theme-2-keys-shadow;
+                }
+            }
+            .key-special{
+                background-color: $theme-2-special-keys-background;
+                color: $theme-2-text-equal;
+                box-shadow: 0 2px 2px $theme-2-special-keys-shadow;
+                &:hover{
+                    background-color: $theme-2-special-keys-shadow;
+                }
+            }
+            #equal-btn{
+                background-color: $theme-2-key-background-equal;
+                box-shadow: 0 2px 2px $theme-2-key-shadow-equal;
+                color: $theme-2-text-equal;
+                &:hover{
+                    background-color: $theme-2-key-shadow-equal;
+                }
+            }
+        }
+    }
+}
+
+.neon-theme{
+    background-color: $theme-3-main-background;
+    .calculator{
+        background: $theme-3-main-background;
+        .top .switch-container .toggle-container{
+            background-color: $theme-3-keypad-background;
+        }
+        .top > *{
+            color: $theme-3-text;
+        }
+        .result{
+            background-color: $theme-3-screen-background;
+            .result-text{
+                color: $theme-3-text;
+            }
+        }
+        .keys-container{
+            background-color: $theme-3-keypad-background;
+            .key{
+                box-shadow: 0 2px 2px $theme-3-keys-shadow;
+                color: $theme-3-text;
+                background: $theme-3-keys-background;
+                &:hover{
+                    background-color: $theme-3-keys-shadow;
+                }
+            }
+            .key-special{
+                background-color: $theme-3-special-keys-background;
+                color: $theme-3-text-equal;
+                box-shadow: 0 2px 2px $theme-3-special-keys-shadow;
+                &:hover{
+                    background-color: $theme-3-special-keys-shadow;
+                }
+            }
+            #equal-btn{
+                background-color: $theme-3-key-background-equal;
+                box-shadow: 0 2px 2px $theme-3-key-shadow-equal;
+                color: $theme-3-text-equal;
+                &:hover{
+                    background-color: $theme-3-key-shadow-equal;
+                }
+            }
+        }
+    }
+}

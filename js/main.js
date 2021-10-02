@@ -2,12 +2,12 @@ const themeRange = document.getElementById('theme-toggle')
 const keys = document.querySelector('.keys-container')
 let calcText = document.getElementById('result');
 
-let themeStep = 1;
+const themes = ['normal', 'light', 'neon']
 
 keys.addEventListener('click', (e) => handleCalculatorButtons(e))
 themeRange.addEventListener('change', (e)=>{
-    themeStep = e.target.value
-})
+    handleThemeChange(e.target.value)
+});
 
 function handleCalculatorButtons (e) {
     if(e.target.tagName !== 'BUTTON' ){
@@ -30,4 +30,8 @@ function handleCalculatorButtons (e) {
             calcText.innerText += e.target.innerHTML
             break;
     }
+}
+function handleThemeChange (value){
+    document.querySelector('body').classList.remove('normal-theme', 'light-theme', 'neon-theme')
+    document.querySelector('body').classList.add(`${themes[parseInt(value)]}-theme`)
 }
