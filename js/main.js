@@ -15,17 +15,31 @@ function handleCalculatorButtons (e) {
     }
     switch (e.target.innerHTML) {
         case "DEL":
-            return calcText.innerText = calcText.innerText.slice(0,-1)
-        
+            if(calcText.innerText ==='Syntax ERROR'){
+                return calcText.innerText = '0'
+            } else {
+                return calcText.innerText = calcText.innerText.slice(0,-1)
+        }
+
         case 'RESET':
         return calcText.innerText = "0"
     
         case '=':
-            let result = eval(calcText.innerText.replaceAll("x", "*"))
-            return calcText.innerText = result
+            try {
+                let result = eval(calcText.innerText.replaceAll("x", "*"))
+                if(result === Infinity){
+                    result = 'Math ERROR'
+                }
+                return calcText.innerText = result
+            } catch (error) {
+                return calcText.innerText = 'Syntax ERROR'
+            }
+
         default:
             if(calcText.innerText ==="0"){
                 calcText.innerText = calcText.innerText.slice(0,-1)
+            } else if (calcText.innerText === "Syntax ERROR" || calcText.innerText === "Math ERROR"){
+                calcText.innerText = '';
             }
             calcText.innerText += e.target.innerHTML
             break;
